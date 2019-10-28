@@ -1,0 +1,173 @@
+<style>
+	svg {
+		border: 1.5px solid black;
+		transform: rotateX(180deg);
+	}
+
+	 svg text {
+			 fill: black;
+			 font: 15px sans-serif;
+			 text-anchor: end;
+	 }
+	 .text1 {
+			 transform: scale(1, -1);
+	 }
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Algorithm Runtime</title>
+</head>
+<body>
+
+<h3>Algorithms Project - Part 3</h3>
+<span>Kyle Strougo</span>
+
+<hr/>
+
+<div>
+ <h2>Sorting Algorithm Runtimes</h2>
+
+
+    <svg id="Line" width="700" height="500"></svg>
+		<pre align="left">
+	Merge Sort - Black		Quicksort - Red		Heap Sort - Blue
+		 </pre>
+
+		<h2>Tree Runtimes</h2>
+
+  <svg id="Line2" width="700" height="500"></svg>
+</div>
+
+<div>
+
+	<script src="runtimes.js" charset="utf-8"></script>
+
+	<script>
+		//----------------------merge
+
+	for (var i = 0; i < ((merge.length)-1); i++) {
+
+    var s = (merge[i].s)/10;
+    var r = (merge[i].t)/1000;
+		s2 = (merge[i+1].s)/10;
+		r2 = (merge[i+1].t)/1000;
+
+
+	var svg = document.getElementById("Line");
+	var newLine = document.createElementNS("http://www.w3.org/2000/svg",'line');
+	newLine.setAttribute("id",Line);
+
+	newLine.setAttribute("x1",s);
+	newLine.setAttribute("y1", r);
+
+	newLine.setAttribute("x2", s2);
+	newLine.setAttribute("y2",r2);
+
+	newLine.setAttribute("stroke", "black")
+	svg.append(newLine);
+	}
+	//----------------------quick
+
+	for (var i = 0; i < ((quick.length)-1); i++) {
+
+    var s = (quick[i].s)/10;
+    var r = (quick[i].t)/1000;
+		s2 = (quick[i+1].s)/10;
+		r2 = (quick[i+1].t)/1000;
+
+
+	var svg2 = document.getElementById("Line");
+	var newLine2 = document.createElementNS("http://www.w3.org/2000/svg",'line');
+	newLine2.setAttribute("id",Line);
+
+	newLine2.setAttribute("x1",s);
+	newLine2.setAttribute("y1", r);
+
+	newLine2.setAttribute("x2", s2);
+	newLine2.setAttribute("y2",r2);
+
+	newLine2.setAttribute("stroke", "red")
+	svg2.append(newLine2);
+	}
+
+	//----------------------heap
+	for (var i = 0; i < ((heap.length)-1); i++) {
+
+		var s = (heap[i].s)/10;
+		var r = (heap[i].t)/1000;
+		s2 = (heap[i+1].s)/10;
+		r2 = (heap[i+1].t)/1000;
+
+
+	var svg3 = document.getElementById("Line");
+	var newLine3 = document.createElementNS("http://www.w3.org/2000/svg",'line');
+	newLine3.setAttribute("id",Line);
+
+	newLine3.setAttribute("x1",s);
+	newLine3.setAttribute("y1", r);
+
+	newLine3.setAttribute("x2", s2);
+	newLine3.setAttribute("y2",r2);
+
+	newLine3.setAttribute("stroke", "blue")
+	svg3.append(newLine3);
+	}
+
+	//----------------------AVL
+
+	for (var i = 0; i < ((AVL.length)-1); i++) {
+
+		var s = (AVL[i].s)/10;
+		var r = (AVL[i].t)/50;
+		s2 = (AVL[i+1].s)/10;
+		r2 = (AVL[i+1].t)/50;
+
+
+	var svg4 = document.getElementById("Line2");
+	var newLine4 = document.createElementNS("http://www.w3.org/2000/svg",'line');
+	newLine4.setAttribute("id",Line2);
+
+	newLine4.setAttribute("x1",s);
+	newLine4.setAttribute("y1", r);
+
+	newLine4.setAttribute("x2", s2);
+	newLine4.setAttribute("y2",r2);
+
+	newLine4.setAttribute("stroke", "red")
+	svg4.append(newLine4);
+	}
+
+	//----------------------BST
+
+	for (var i = 0; i < ((BST.length)-1); i++) {
+
+		var s = (BST[i].s)/10;
+		var r = (BST[i].t)/50;
+		s2 = (BST[i+1].s)/10;
+		r2 = (BST[i+1].t)/50;
+
+
+	var svg5 = document.getElementById("Line2");
+	var newLine5 = document.createElementNS("http://www.w3.org/2000/svg",'line');
+	newLine5.setAttribute("id",Line2);
+
+	newLine5.setAttribute("x1",s);
+	newLine5.setAttribute("y1", r);
+
+	newLine5.setAttribute("x2", s2);
+	newLine5.setAttribute("y2",r2);
+
+	newLine5.setAttribute("stroke", "blue")
+	svg5.append(newLine5);
+	}
+
+	</script>
+
+	<pre align="left">
+		AVL Tree - Red		Binary Search tree - Blue
+	 </pre>
+	 
+</body>
+</html>

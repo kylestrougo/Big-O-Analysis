@@ -1,3 +1,5 @@
+// input size: s
+// nanoseconds: t
 var merge = [
  {s: 0, t: 11672},
  {s: 3000, t: 219414},
